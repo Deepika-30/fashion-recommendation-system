@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filter Example</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    .filters {
+    list-style-type: none;
+    padding: 0;
+}
+
+.filters li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.filters li a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filters li a:hover {
+    background-color: #eea8a8;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: none; /* Initially hide all items */
+}
+
+/* Show items based on selected filter */
+.item:target {
+    display: block;
+}
+
+</style>
+</head>
+<body>
+    <ul class="filters">
+        <li><a href="#filter1">Filter 1</a></li>
+        <li><a href="#filter2">Filter 2</a></li>
+        <li><a href="#filter3">Filter 3</a></li>
+    </ul>
+    
+    <div class="gallery">
+        <div class="item" id="filter1">Item 1 (Filter 1)</div>
+        <div class="item" id="filter2">Item 2 (Filter 2)</div>
+        <div class="item" id="filter3">Item 3 (Filter 3)</div>
+    </div>
+</body>
+</html>
